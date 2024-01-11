@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+
+        1. Create an object containing:
+                Two number properties.
+                Two methods:
+                    Print the sum of the properties in the console.
+                    Print the multiplication of the properties in the console.
+
+        2. Create a button that prompts the user for a property name.
+                If the property name is the same as the name of one of the object properties, prompt the user for a new value for that property.
+
+        3. Create two buttons and link the object methods to them.
+
+-->
+
+    <button onclick="modify()">Modify property</button>
+    
+    <button onclick="myObject.sum()">Sum</button>
+    <button onclick="myObject.multuplication()">Mulitply</button>
+  
+
+    <script>
+        const myObject = {
+            value1: 1,
+            value2: 2,
+
+            sum: function(){
+                console.log(this.value1 + this.value2);
+            },
+            multuplication: function(){
+                console.log(this.value1 * this.value2);
+            },
+        };
+
+        function modify(){
+            const name = prompt("Provide the name of the property you want to modify");
+            if(myObject[name] != null){
+                const newValue = parseInt(prompt("Please give a new value"));
+                if(!isNaN(newValue)){
+                    myObject[name] = newValue;
+                }
+            }
+        }
+    </script>
+
+
+</body>
+</html>
