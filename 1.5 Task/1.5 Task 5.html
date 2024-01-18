@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Design a template for the following object using an object constructor:
+        const book = {
+            title: "Harry Potter",
+            releaseYear: 1997,
+            author: "J.K. Rowling",
+            cast: function() {
+                return alert("Avada Kedavra")
+            }
+        };
+         */
+
+        function Book (
+            title,
+            releaseYear,
+            author
+        ){
+            this.title = title;
+            this.releaseYear = releaseYear;
+            this.author =author;
+            this.cast = function(){
+                return alert("Avada Kedavra")
+            }
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Convert the following object to a JSON. Display it in the console with proper indents. Convert it back to the JavaScript object and display it in the console.
+        {
+            title: "Harry Potter",
+            releaseYear: 1997,
+            author: "J.K. Rowling"
+        };
+        */
+
+        const obj = {
+            title: "Harry Potter",
+            releaseYear: 1997,
+            author: "J.K. Rowling"
+        };
+
+        const serialized = JSON.stringify(obj, null, 5);
+        console.log(serialized);
+        const deserialized = JSON.parse(serialized);
+        console.log(deserialized);
+
+    </script>
+</body>
+</html>
