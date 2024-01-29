@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const TextGenerator = ({ textToAdd }) => {
+            var _textToAdd = textToAdd;
+            return {
+                generateText: x => y => x + _textToAdd + y,
+                setTextToAdd: newTextToAdd => _textToAdd = newTextToAdd,
+            };
+        };
+
+
+        const tg = TextGenerator({textToAdd: '......'});
+        const fun = tg.generateText("First text");
+        console.log(fun("Second text"));
+        tg.setTextToAdd("^___^");
+        console.log(fun("Second Text"));
+    </script>
+</body>
+</html>
